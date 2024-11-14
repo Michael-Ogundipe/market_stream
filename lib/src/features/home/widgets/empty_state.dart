@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../consts/colors.dart';
+import '../../../../consts/colors.dart';
+
 
 class EmptyState extends StatelessWidget {
   const EmptyState({

@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../consts/assets.dart';
-import '../consts/colors.dart';
-import '../widgets/asset_overview.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/empty_state.dart';
-import '../widgets/market_panel.dart';
+import '../../../consts/assets.dart';
+import '../../../consts/colors.dart';
+import 'widgets/asset_overview.dart';
+import 'widgets/custom_button.dart';
+import 'widgets/empty_state.dart';
+import 'widgets/market_panel.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late final TabController _tabController;
   late final TabController _tabController2;
 

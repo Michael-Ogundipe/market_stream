@@ -6,5 +6,7 @@ class Assets {
 
   static const logo = '$_images/logo.png';
   static const avatar = '$_images/avatar.png';
+  static const crypto =  '$_images/crypto_coin.png';
+
 
 }
