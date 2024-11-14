@@ -7,6 +7,7 @@ import 'widgets/asset_overview.dart';
 import 'widgets/custom_button.dart';
 import 'widgets/empty_state.dart';
 import 'widgets/market_panel.dart';
+import 'widgets/order_book.dart';
 
 
 
@@ -33,11 +34,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Tab(text: 'Position'),
   ];
 
-  final List<Widget> _tabBarViews = const [
-    Center(child: Text('Charts')),
-    Center(child: Text('Orderbook')),
-    Center(child: Text('Recent Trade')),
-  ];
 
   final List<Widget> _tabBarViews2 = const [
     EmptyState(),
@@ -85,12 +81,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             const AssetOverview(),
             const SizedBox(height: 8),
             MarketPanel(
+              height: 660,
               tabController: _tabController,
               tabs: _tabs,
-              tabBarViews: _tabBarViews,
+              tabBarViews: const [
+                Center(child: Text('Charts')),
+                OrderBook(),
+                Center(child: Text('Recent Trade')),
+              ],
             ),
             const SizedBox(height: 8),
             MarketPanel(
+              height: 300,
               tabController: _tabController2,
               tabs: _tabs2,
               tabBarViews: _tabBarViews2,
